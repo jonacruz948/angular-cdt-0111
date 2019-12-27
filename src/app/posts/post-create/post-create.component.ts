@@ -5,9 +5,9 @@ import { Component } from "@angular/core";
   templateUrl: "./post-create.component.html"
 })
 export class PostCreateComponent {
+  enteredValue = "";
   newPost = "no content";
-  onAddPost(postInput: HTMLTextAreaElement) {
-    console.dir(postInput);
-    this.newPost = postInput.value;
+  onAddPost() {
+    this.newPost = this.enteredValue;
   }
 }
