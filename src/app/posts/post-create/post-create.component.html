@@ -1,4 +1,12 @@
-<textarea rows="6" [(ngModel)]="enteredValue"></textarea> <!-- two-way binding -->
-<hr />
-<button (click)="onAddPost()">Save Post</button> <!-- event binding -->
-<p>{{ newPost }}</p> <!-- string interpolation -->
+<mat-card>
+  <mat-form-field>
+    <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+    <!-- two-way binding -->
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="onAddPost()">
+    Save Post
+  </button>
+  <!-- event binding -->
+</mat-card>
+<p>{{ newPost }}</p>
+<!-- string interpolation -->
