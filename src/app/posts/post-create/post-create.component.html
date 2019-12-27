@@ -1,12 +1,15 @@
 <mat-card>
   <mat-form-field>
-    <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
-    <!-- two-way binding -->
+    <input matInput type="text" [(ngModel)]="enteredTitle" />
   </mat-form-field>
+  <mat-form-field>
+    <!-- two-way binding -->
+    <textarea matInput rows="6" [(ngModel)]="enteredContent"></textarea>
+  </mat-form-field>
+  <!-- event binding -->
   <button mat-raised-button color="primary" (click)="onAddPost()">
     Save Post
   </button>
-  <!-- event binding -->
 </mat-card>
-<p>{{ newPost }}</p>
 <!-- string interpolation -->
+<!-- <p>{{ newPost }}</p> -->
